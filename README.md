@@ -93,7 +93,7 @@ Tbh, you could just copy from here to the fstab. Nothing fancy:\
 30. Don't forget to add ssh to the startup runlevel with `rc-update add sshd default`
 31. Shell completion, pretty important, install with `emerge --ask app-shells/bash-completion`
 32. Use Chrony to sync the time when the OS boots, install with `emerge --ask net-misc/chrony`, and add it to the startup runlevel with `rc-update add chronyd default`
-33. Install file system tools:\
+33. Install file system tools based on what you need:\
 XFS: `emerge -a sys-fs/xfsprogs`\
 ext4: already included, but if you wish, `emerge -a sys-fs/e2fsprogs`\
 VFAT (FAT32, etc.): `emerge -a sys-fs/dosfstools`\
@@ -101,7 +101,7 @@ Btrfs: `emerge -a sys-fs/btrfs-progs`\
 F2FS: `emerge -a sys-fs/f2fs-tools`\
 NTFS: `emerge -a sys-fs/ntfs3g`\
 ZFS: `emerge -a sys-fs/zfs`\
-bcachefs: e`merge -a sys-fs/bcachefs-tools
+bcachefs: `emerge -a sys-fs/bcachefs-tools
 
 34. Scheduler for nvme devices and etc, pretty necessary, right? `emerge --ask sys-block/io-scheduler-udev-rules`
 35. Install dhcpd for ethernet connections or so `emerge --ask net-misc/dhcpcd`, or NetworkManager, which uses nmcli to connect to wifi, and I found it easy to use. Install it with `emerge --ask net-misc/networkmanager`. !!I do not recommend install both. Just choose one!
